@@ -34,16 +34,16 @@ spec:
     targetPort: 80
 ---
 apiVersion: networking.k8s.io/v1
-kind: ingress
+kind: Ingress
 metadata:
   name: app1
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:315069654700:certificate/c565ac42-ac77-4cb4-beb5-8f915ffaa11a
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:891377396025:certificate/95a8c826-45ec-4c96-aeaf-37e890f3658c
     ald:ingress.kubernets.io/group.name: khalidaws2024
-    #alb.ingress.kubernetes.io/group.name: khalidaws2024
+    
 
 spec:
   ingressClassName: alb
